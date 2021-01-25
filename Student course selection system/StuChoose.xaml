@@ -1,0 +1,62 @@
+﻿<Page x:Class="Student_course_selection_system.StuChoose"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Student_course_selection_system"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StuChoose">
+
+    <Grid Background="AliceBlue">
+        <DataGrid x:Name="dataGrid" CanUserAddRows="False" AutoGenerateColumns="False" GridLinesVisibility="All"  BorderThickness="1" Margin="2,51,0,-0.4">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header ="课程号" Binding ="{Binding Path = NEW_COURSE_ID}"/>
+                <DataGridTextColumn Header ="课程名" Binding ="{Binding Path = COURSE_NAME}"/>
+                <DataGridTextColumn Header ="教师" Binding ="{Binding Path = TEACHER_NAME}"/>
+                <DataGridTextColumn Header ="课程类型" Binding ="{Binding Path = COURSE_TYPE}"/>
+                <DataGridTextColumn Header ="考察类型" Binding ="{Binding Path = COURSE_INVESTIGATE}"/>
+                <DataGridTextColumn Header ="上课时间" Binding ="{Binding Path = COURSE_TIME}"/>
+                <DataGridTextColumn Header ="周次" Binding ="{Binding Path = COURSE_LEN}"/>
+                <DataGridTextColumn Header ="学分" Binding ="{Binding Path = COURSE_CREDIT}"/>
+                <DataGridTextColumn Header ="课时" Binding ="{Binding Path = COURSE_CLASS}"/>
+                <DataGridTemplateColumn x:Name= "UserAction"  Header= "操作">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation= "Horizontal" >
+                                <Button x:Name= "get" Content= "选课" IsEnabled= "{Binding }" Click= "BtnAction_Click"  HorizontalContentAlignment= "Center"  VerticalContentAlignment= "Center" >
+                                </Button>
+                                <Button x:Name= "ret" Content= "退课" IsEnabled= "{Binding }" Click= "BtnAction_Click1"  HorizontalContentAlignment= "Center"  VerticalContentAlignment= "Center" >
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="查询" HorizontalAlignment="Left" Margin="482,8,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox x:Name="cou_name" HorizontalAlignment="Left" Height="28" Margin="258,12,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HintText" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Italic" Text="请输入课程名"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HintText}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HintText}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+    </Grid>
+</Page>

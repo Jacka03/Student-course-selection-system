@@ -1,0 +1,72 @@
+﻿<Window x:Class="Student_course_selection_system.TeacherWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Student_course_selection_system"
+        mc:Ignorable="d"
+        Title="teacherWin" Height="500" Width="1000">
+    <Grid>
+
+        <Grid HorizontalAlignment="Left" Height="392" VerticalAlignment="Top" Width="202" Margin="0,77,0,0">
+            <StackPanel HorizontalAlignment="Left" Height="392" Margin="0,1,0,-1" VerticalAlignment="Top" Width="198">
+                <Expander VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True">
+                    <Expander.Header>
+                        <TextBlock Text="个人信息" FontSize="14" FontWeight="Bold" />
+                    </Expander.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <RadioButton Grid.Row="0" Content="查看信息" Checked="RadioButton_Checked" Margin="16,0,-16.4,17.2" Grid.RowSpan="2" />
+                        <RadioButton Grid.Row="1" Content="修改信息" Checked="RadioButton_Checked_1" Margin="16,16.2,-16.4,-0.8" />
+                    </Grid>
+                </Expander>
+
+                <Expander VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True">
+                    <Expander.Header>
+                        <TextBlock Text="班级管理" FontSize="14" FontWeight="Bold" />
+                    </Expander.Header>
+                    <Grid Width="113">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <RadioButton Grid.Row="0" Content="查看课表" HorizontalAlignment="Left" Margin="14,0,-12,17.2" Grid.RowSpan="2" Width="70" Checked="RadioButton_Checked_2" />
+                        <RadioButton Grid.Row="1" Content="选课信息" Margin="14,17,-14,0.2" RenderTransformOrigin="0.5,0.511" Checked="RadioButton_Checked_3"  />
+                    </Grid>
+                </Expander>
+
+                <Expander VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Margin="0,0,-0.6,0" Height="296">
+                    <Expander.Header>
+                        <TextBlock FontSize="14" FontWeight="Bold" Margin="0,0,20.2,0" ><Run Text="综合"/><Run Text="管理"/></TextBlock>
+                    </Expander.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+
+                            <RowDefinition Height="auto"/>
+
+                        </Grid.RowDefinitions>
+                        <RadioButton  Grid.Row="0" Content="学生信息" Margin="20,0,-20.6,-0.4" Grid.RowSpan="2" HorizontalAlignment="Left" Width="71" RenderTransformOrigin="0.5,0.511" Checked="RadioButton_Checked_4" />
+                        <RadioButton  Grid.Row="1" Content="老师信息" Margin="20,13.2,-20.4,-22.4" Checked="RadioButton_Checked_5" />
+                        <RadioButton  Grid.Row="3" Content="课程信息" Margin="20,22.4,-19.6,-31.4" HorizontalAlignment="Left" Width="70" Checked="RadioButton_Checked_6" />
+                        <RadioButton  Grid.Row="4" Content="退出登录" Margin="20,41.4,-19.6,-50.6" Checked="RadioButton_Checked_7" HorizontalAlignment="Left" Width="70" />
+
+                    </Grid>
+                </Expander>
+            </StackPanel>
+        </Grid>
+
+        <ContentControl x:Name="stuInfo" Margin="202,0,-0.4,0" VerticalAlignment="Top" Height="470">
+            <Grid HorizontalAlignment="Left" Height="243" Margin="152,135,0,0" VerticalAlignment="Top" Width="510">
+                <Label Content="欢迎进入学生管理系统" HorizontalAlignment="Left" Margin="63,115,0,0" VerticalAlignment="Top" FontSize="36"/>
+                <Label x:Name="test" HorizontalAlignment="Left" Height="66" Margin="156,42,0,0" VerticalAlignment="Top" Width="215" FontSize="36"/>
+            </Grid>
+        </ContentControl>
+
+    </Grid>
+</Window>

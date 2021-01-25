@@ -1,0 +1,77 @@
+﻿<Page x:Class="Student_course_selection_system.TeacherCourse"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Student_course_selection_system"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="TeacherCourse">
+
+    <Grid   Background="AliceBlue">
+
+        <DataGrid x:Name="dataGrid" CanUserAddRows="False" AutoGenerateColumns="False" GridLinesVisibility="All"  BorderThickness="1" Margin="122,0,0,0" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header ="学号" Binding ="{Binding STUDENT_ID}"/>
+                <DataGridTextColumn Header ="姓名" Binding ="{Binding STUDENT_NAME}"/>
+                <DataGridTextColumn Header ="课程号" Binding ="{Binding NEW_COURSE_ID}"/>
+                <DataGridTextColumn Header ="学号" Binding ="{Binding NEW_COURSE_ID}"/>
+                <DataGridTextColumn Header ="成绩" Binding ="{Binding STUDENT_GRADE}"/>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid  HorizontalAlignment="Left" Height="499" VerticalAlignment="Top" Width="122">
+            <StackPanel  HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="122" Margin="-1,0,0,-1">
+                <Expander VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Margin="1,0,-1.4,0">
+                    <Expander.Header>
+                        <TextBlock Text="课程" FontSize="12" FontWeight="Bold" />
+                    </Expander.Header>
+                    <Grid x:Name="course">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+
+                        </Grid.RowDefinitions>
+
+                    </Grid>
+                </Expander>
+
+
+                <Expander VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Margin="1,0,-1.4,0">
+                    <Expander.Header>
+                        <TextBlock Text="班别" FontSize="12" FontWeight="Bold" />
+                    </Expander.Header>
+                    <Grid x:Name="classes">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+
+                        </Grid.RowDefinitions>
+                        
+                    </Grid>
+                </Expander>
+            </StackPanel>
+
+
+        </Grid>
+
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,34 @@
+﻿<Page x:Class="Student_course_selection_system.StuInfoChange"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Student_course_selection_system"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StuInfoChange">
+
+    <Grid Background="AliceBlue">
+        <Label Content="姓名" HorizontalAlignment="Left" Height="23" Margin="309,101,0,0" VerticalAlignment="Top" Width="37" FontSize="14"/>
+        <Label Content="学号" HorizontalAlignment="Left" Margin="213,149,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="性别" HorizontalAlignment="Left" Margin="442,258,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="26" Margin="357,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="26" Margin="249,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Label Content="学生个人信息" HorizontalAlignment="Left" Height="39" Margin="321,21,0,0" VerticalAlignment="Top" Width="166" FontSize="24"/>
+        <Label Content="学院" HorizontalAlignment="Left" Margin="442,149,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="department" HorizontalAlignment="Left" Height="26" Margin="486,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Label Content="班级" HorizontalAlignment="Left" Margin="213,197,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="class_name" HorizontalAlignment="Left" Height="26" Margin="249,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Label Content="入学时间" HorizontalAlignment="Left" Margin="189,258,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="entime" HorizontalAlignment="Left" Height="26" Margin="249,255,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Label Content="班主任" HorizontalAlignment="Left" Margin="430,197,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="teacher" HorizontalAlignment="Left" Height="26" Margin="486,194,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Label Content="新密码" HorizontalAlignment="Left" Margin="201,309,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="确认新密码" HorizontalAlignment="Left" Margin="406,309,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <RadioButton Content="男" HorizontalAlignment="Left" Height="23" Margin="483,258,0,0" VerticalAlignment="Top" Width="51" FontSize="14"/>
+        <RadioButton Content="女" HorizontalAlignment="Left" Height="22" Margin="546,259,0,0" VerticalAlignment="Top" Width="69" FontSize="14"/>
+        <Button Content="确认修改" HorizontalAlignment="Left" Height="35" Margin="325,382,0,0" VerticalAlignment="Top" Width="157" Click="Button_Click"/>
+        <PasswordBox x:Name="newPassword" HorizontalAlignment="Left" Height="31" Margin="249,301,0,0" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <PasswordBox x:Name="newPassword1" HorizontalAlignment="Left" Height="31" Margin="487,301,0,0" VerticalAlignment="Top" Width="120" FontSize="14"/>
+    </Grid>
+</Page>
